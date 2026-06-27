@@ -1,0 +1,11 @@
+# Compiled class files
+out/
+*.class
+
+# Storage directory (user data)
+storage/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
