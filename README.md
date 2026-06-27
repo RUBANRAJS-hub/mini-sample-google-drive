@@ -1,61 +1,96 @@
-# Mini Google Drive
+<div align="center">
 
-## Abstract
+  <img src="assets/banner.png" alt="Mini Google Drive 3D Banner" width="100%" style="border-radius: 15px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
-Mini Google Drive is a Java-based file management system that simulates cloud storage functionality in a local environment. The system allows users to upload, store, search, and manage different types of files such as images and videos within a structured directory system.
+  <h1>☁️ Mini Google Drive ☁️</h1>
 
-This project is designed to demonstrate core concepts of Java programming including file handling, object-oriented programming, and system design without using any external database or cloud services.
+  <p>
+    <strong>A high-performance, locally simulated cloud storage console application built in Java.</strong>
+  </p>
 
-## 🎯 Objective
+  <p>
+    <img alt="Java" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
+    <img alt="CLI" src="https://img.shields.io/badge/CLI-Terminal-4D4D4D?style=for-the-badge&logo=windows-terminal&logoColor=white" />
+    <img alt="OOP" src="https://img.shields.io/badge/Architecture-OOP-00599C?style=for-the-badge&logo=java&logoColor=white" />
+  </p>
 
-The main objective of this project is to create a simplified version of a cloud storage system that helps users manage digital files efficiently using a console-based Java application.
+</div>
 
-## ⚙️ Key Features
+<hr>
 
-- **Upload Files**: Upload image and video files into local storage.
-- **Automatic Categorization**: Files are automatically organized into folders (e.g., `images/`, `videos/`) based on their extensions.
-- **View Files**: View all stored files in a tree-like directory structure.
-- **Search Files**: Search for files by name or keyword.
-- **Delete Files**: Delete unwanted files from the storage.
-- **Interactive UI**: Simple and user-friendly console interface.
+## 📖 Abstract
 
-## 🧠 Technologies Used
+Mini Google Drive is a Java-based file management system that beautifully simulates cloud storage functionality entirely within your local environment. It provides a robust engine to upload, store, categorize, search, and manage various types of files (such as images, videos, and documents) using a highly structured backend directory system.
 
-- Java (Core)
-- File Handling (`java.io` and `java.nio.file`)
-- Object-Oriented Programming (OOP)
-- Local File System Storage
+Built strictly without external database dependencies, this project exists to demonstrate mastery over core Java concepts, file I/O streams, object-oriented programming, and fundamental system design architecture.
 
-## 📁 System Design
+<br>
 
-The application stores files in a structured folder system within the project root:
+## 🎯 Project Objective
 
+To build an efficient, simplified, simulated cloud storage engine. The application empowers users to manage their digital assets intelligently through a streamlined and interactive console interface.
+
+<br>
+
+## ✨ Key Features
+
+| Feature | Description |
+| :--- | :--- |
+| 📤 **Smart Uploads** | Automatically ingest image and video files into your local storage environment. |
+| 🗂️ **Auto-Categorization** | Intelligently sorts files into categorized buckets (e.g., `images/`, `videos/`) by parsing their extensions in real-time. |
+| 👁️ **Visual Directory** | Renders a clean, hierarchical tree-view of all your stored digital assets. |
+| 🔍 **Deep Search** | Quickly scan your entire storage instance by filename or keyword to locate assets instantly. |
+| 🗑️ **Asset Deletion** | Safely remove and permanently delete unwanted files to free up simulated cloud space. |
+| 💻 **Interactive CLI** | Navigate through the system using a highly responsive, user-friendly console menu. |
+
+<br>
+
+## 🛠️ System Architecture & Design
+
+The application enforces a strict, robust folder structure at the root level to keep data cleanly segregated:
+
+```text
+📦 Mini-Google-Drive
+ ┣ 📂 storage
+ ┃ ┣ 📂 images      ➔ Parses and routes .jpg, .png, .gif, .bmp
+ ┃ ┣ 📂 videos      ➔ Parses and routes .mp4, .mkv, .avi, .mov
+ ┃ ┗ 📂 others      ➔ Catch-all bin for unsupported formats
+ ┣ 📂 src
+ ┃ ┗ 📂 minidrive   ➔ Core source code packages
 ```
-storage/
-├── images/     # Stores .jpg, .png, .gif, etc.
-├── videos/     # Stores .mp4, .mkv, .avi, etc.
-└── others/     # Stores unsupported file types
+
+<br>
+
+## 🚀 Getting Started
+
+Follow these instructions to get your local cloud storage running in seconds.
+
+### 1. Compilation
+Fire up your terminal (PowerShell, CMD, Bash) in the project's root directory and compile the `.java` files into an `out` directory:
+```bash
+mkdir -p out
+javac -d out src/minidrive/*.java
 ```
 
-Each file is processed and stored based on its extension type.
+### 2. Execution
+Run the compiled byte-code to launch the interactive terminal interface:
+```bash
+java -cp out minidrive.Main
+```
 
-## 🚀 How to Run
+### 3. Interaction
+Use the number keys to navigate the console menu. When uploading, simply paste the full absolute path of the file on your computer.
 
-1. **Compile the Java files**:
-   Ensure you have Java installed on your system. Open your terminal in the project directory and run:
-   ```bash
-   javac -d out src/minidrive/*.java
-   ```
+<br>
 
-2. **Run the Application**:
-   Execute the compiled main class using:
-   ```bash
-   java -cp out minidrive.Main
-   ```
+## 🌟 Learning Outcomes
 
-3. **Interact**:
-   Follow the on-screen menu to upload, view, search, or delete your files.
+This software acts as a robust foundation for building advanced, scalable file-management solutions. It heavily relies on:
+* **Java I/O & NIO Operations** for rapid file streaming and copying.
+* **Logic Building** for recursive directory scanning and searching.
+* **Architecture Principles** to decouple logic into dedicated classes (`Main`, `StorageManager`, `FileTypeUtils`).
 
-## 🌟 Outcome
-
-This project helps in understanding real-world file management systems and improves skills in Java I/O operations, logic building, and basic system architecture. It serves as a foundation for developing advanced cloud-based applications in the future.
+<hr>
+<div align="center">
+  <sub>Built with ❤️ using Java.</sub>
+</div>
